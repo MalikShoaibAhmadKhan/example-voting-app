@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', 
-                    url: 'https://github.com/MalikShoaibAhmadKhan/example-voting-app.git', 
-                    credentialsId: 'github-token'  // Ensure this matches the credential ID in Jenkins
+                  git branch: 'main', url: 'https://github.com/MalikShoaibAhmadKhan/example-voting-app.git'
+                 
             }
         }
 
