@@ -2,14 +2,7 @@ pipeline {
     agent any
 
     triggers {
-        genericTrigger(
-            genericVariables: [
-                [key: 'ref', value: '$.ref']
-            ],
-            token: 'github-webhook-token',  // Create this in Jenkins
-            printContributedVariables: true,
-            printPostContent: true
-        )
+        githubPush()  // ✅ Correct GitHub webhook trigger
     }
 
     stages {
